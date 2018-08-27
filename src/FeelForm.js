@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FormGroup } from 'react-bootstrap';
+import { Button, Form } from 'semantic-ui-react';
 
 export default class FeelForm extends React.Component {
 
@@ -38,67 +38,52 @@ export default class FeelForm extends React.Component {
      };
 
 
-    // getValidationState = () => {
-    //   const length = this.state.value.length;
-    //   if (length > 10) return 'success';
-    //   else if (length > 5) return 'warning';
-    //   else if (length > 0) return 'error';
-    //   return null;
-    // }
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Thought:
-          <input
+      <Form>
+        <Form.Field>
+          <label>Thought:</label>
+            <input
             name="thought"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
+        </Form.Field>
 
-        <label>
-          Emotion:
-          <input
+        <Form.Field>
+          <label>Emotion:</label>
+            <input
             name="emotion"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
+        </Form.Field>
 
-
-        <label>
-          Support:
-          <input
+        <Form.Field>
+          <label>Support:</label>
+            <input
             name="support"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
+        </Form.Field>
 
-        <label>
-          Against:
-          <input
+        <Form.Field>
+          <label>Against:</label>
+            <input
             name="against"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
+        </Form.Field>
 
-        <label>
-          Alternate Thought:
-          <input
+        <Form.Field>
+          <label>Alternate Thought:</label>
+            <input
             name="alternate_thought"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
+        </Form.Field>
 
-        <label>
-          Alternate Emotion:
-          <input
+        <Form.Field>
+          <label>Alternate Emotion:</label>
+            <input
             name="alternate_emotion"
             onChange={this.handleInputChange} />
-        </label>
-        <br />
-        <input className="btn" type="submit" value="Submit" />
-      </form>
+        </Form.Field>
+    <Button type='submit' onClick={this.handleSubmit}>Submit</Button>
+  </Form>
     );
   }
 }
