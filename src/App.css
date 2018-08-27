@@ -1,0 +1,26 @@
+.goofy {
+  text-align: center;
+  color: #c1257c;
+}
+
+.page-header {
+  background-color: white;
+  text-align: center;
+  height: 75px;
+}
+
+
+.btn {
+	border: 2px solid #c1257c;
+	color: #c1257c;
+}
+
+.btn:active,
+.btn:focus {
+  outline-style: dotted;
+  outline-color: pink;
+}
+
+.page-header:hover{
+  text-shadow: 2px 2px #c1257c;
+}
