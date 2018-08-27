@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import FeelForm from './FeelForm';
-import FeelContainer from './FeelContainer';
+import FeelForm from './components/FeelForm';
+import FeelContainer from './components/FeelContainer';
+import { BrowserRouter as Router, Route } from 'react-router';
 
 class App extends Component {
   state = {

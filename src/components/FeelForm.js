@@ -31,7 +31,7 @@ export default class FeelForm extends React.Component {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          feel: {...this.state}
+          feel: {...this.state /* pass user ID here after adding auth */}
         }),
       });
 
@@ -40,7 +40,7 @@ export default class FeelForm extends React.Component {
 
   render() {
     return (
-      <Form>
+      <Form onSubmit={this.handleSubmit}>
         <Form.Field>
           <label>Thought:</label>
             <input
@@ -82,7 +82,7 @@ export default class FeelForm extends React.Component {
             name="alternate_emotion"
             onChange={this.handleInputChange} />
         </Form.Field>
-    <Button type='submit' onClick={this.handleSubmit}>Submit</Button>
+    <Button type='submit'>Submit</Button>
   </Form>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import FeelCard from './FeelCard';
+import { Card } from 'semantic-ui-react'
 
 export default class FeelContainer extends React.Component {
 
@@ -18,13 +19,13 @@ export default class FeelContainer extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <div>
+      <Card.Group>
       { this.state.feels.map(
           fetchedFeel =>
           <FeelCard feel={fetchedFeel}
            key={fetchedFeel.id} /> )
       }
-      </div>
+      </Card.Group>
     );
   }
 }
