@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'semantic-ui-react';
+import Flexbox from 'flexbox-react';
 
 export default class FeelForm extends React.Component {
 
@@ -40,6 +41,7 @@ export default class FeelForm extends React.Component {
 
   render() {
     return (
+  <Flexbox flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
       <Form onSubmit={this.handleSubmit}>
         <Form.Field>
           <label>Thought:</label>
@@ -82,8 +84,9 @@ export default class FeelForm extends React.Component {
             name="alternate_emotion"
             onChange={this.handleInputChange} />
         </Form.Field>
-    <Button type='submit'>Submit</Button>
-  </Form>
+      <Button type='submit'>Submit</Button>
+    </Form>
+  </Flexbox>
     );
   }
 }

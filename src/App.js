@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import FeelForm from './components/FeelForm';
+import LoginForm from './components/LoginForm';
+import SignUpForm from './components/SignUp';
 import FeelContainer from './components/FeelContainer';
 import Nav from './components/NavBar'
 import Home from './components/Home'
@@ -13,12 +15,13 @@ class App extends Component {
     return (
       <div className="App">
       <Nav/>
-          {/* a cute picture or something on home idk */}
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/new_feeling' component={FeelForm}/>
-        <Route path='/feelings' component={FeelContainer}/>
-      </Switch>
+        <Switch>
+          <Route exact path='/login' component={LoginForm}/>
+          <Route path='/home' component={Home}/>
+          <Route path='/signup' component={SignUpForm}/>
+          <Route path='/new_feeling' component={FeelForm}/>
+          <Route path='/feelings' component={FeelContainer}/>
+        </Switch>
       </div>
     );
   }
